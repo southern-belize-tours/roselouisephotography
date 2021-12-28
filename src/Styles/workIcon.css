@@ -89,3 +89,16 @@
 .hardHatTop::after{
     left: calc(-20% - 5px); 
 }
+
+@media(max-width:425px){
+    :root{
+        --hardHatBoxHeight: 10rem;
+        --hardHatBoxWidth: 16rem; 
+    }
+
+    .inWork{
+        padding: 2rem 0rem;
+        margin: 0rem 2rem; 
+        font-size: 1rem; 
+    }
+}
