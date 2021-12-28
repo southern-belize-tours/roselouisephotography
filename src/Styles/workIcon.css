@@ -1,0 +1,91 @@
+:root{
+    --defaultPadding: 2rem; 
+    --bodyMargin: 5rem; 
+    --hardHatBoxHeight: 20rem;
+    --hardHatBoxWidth: 32rem; 
+    --hardHatBorderRadius: .5rem;
+    --darkYellow: rgb(236, 202, 47); 
+}
+
+.workIconContainer{
+    padding: var(--defaultPadding) var(--bodyMargin); 
+}
+
+.hardHatBox{
+    height: var(--hardHatBoxHeight);
+    width: var(--hardHatBoxWidth); 
+    display: flex; 
+    position: relative;
+    margin: 0 auto; 
+    overflow: hidden; 
+    cursor: pointer;
+    transition: all .3s ease-in-out; 
+}
+
+.hardHatBox:hover{
+    transform: scale(1.04); 
+}
+
+.hardHatBase{
+    width: calc(100% - 8px); 
+    height: calc(.1 * var(--hardHatBoxHeight) - 5px); 
+    background-color: var(--darkYellow);
+    bottom: 0px; 
+    position: absolute; 
+    overflow: hidden; 
+    z-index: 1; 
+    border-style:solid;
+    border-color:black;
+    border-radius: var(--hardHatBorderRadius); 
+}
+
+.hardHatCircle{
+    height: 170%; 
+    width: 95%; 
+    left: 2.5%; 
+    top: 15%; 
+    background-color: yellow; 
+    border-radius: 50%; 
+    position: absolute;
+    z-index: 0; 
+    border-style:solid;
+    border-color:black;
+}
+
+.hardHatTop{
+    width: 20%; 
+    height: calc(90% - 4px); 
+    position: absolute; 
+    top: 0; 
+    left: 40%; 
+    background-color: var(--darkYellow); 
+    z-index: 1; 
+    border-style:solid;
+    border-color:black;
+    border-radius: var(--hardHatBorderRadius); 
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+.hardHatTop::before, .hardHatTop::after{
+    position: absolute;
+    content: ''; 
+    width: 20%; 
+    height: calc(.85 * var(--hardHatBoxHeight)); 
+    top: calc(5% - 5px); 
+    z-index: 1; 
+    background-color: yellow; 
+    border-style:solid;
+    border-color:black;
+    border-radius: var(--hardHatBorderRadius); 
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+.hardHatTop::before{
+    right: calc(-20% - 5px); 
+}
+
+.hardHatTop::after{
+    left: calc(-20% - 5px); 
+}
